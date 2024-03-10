@@ -23,9 +23,9 @@ function arrayIntersectionAlt(arr1, arr2) {
   const arr1WithoutDuplicates = [...new Set(arr1)];
   const set2WithoutDuplicates = new Set(arr2);
   const intersection = [];
-  for (let i = 0; i < arr1.length; i++) {
-    if (set2WithoutDuplicates.has(arr1WithoutDuplicates[i])) {
-      intersection.push(arr1WithoutDuplicates[i]);
+  for (let num of arr1WithoutDuplicates) {
+    if (set2WithoutDuplicates.has(num)) {
+      intersection.push(num);
     }
   }
   return intersection;
