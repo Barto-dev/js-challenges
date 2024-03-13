@@ -1,6 +1,3 @@
-const alphabetArr = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-
-
 /**
  * Returns the missing letter in an array of consecutive letters.
  * @param {string[]} arr - An array of consecutive letters.
@@ -15,25 +12,6 @@ function findMissingLetter(arr) {
     }
   }
   return '';
-}
-
-/**
- * Returns the missing letter in an array of consecutive letters.
- * @param {string[]} arr - An array of consecutive letters.
- * @returns {string} - The missing letter.
- */
-function findMissingLetterAlt(arr) {
-  if (!arr || !arr.length) {
-    return '';
-  }
-
-  const indexes = arr.map((item) => alphabetArr.indexOf(item));
-  const missedIndex = indexes.filter((item, index, arr) => {
-    return arr[index + 1] - item === 2;
-  })[0];
-  if (missedIndex) {
-    return alphabetArr[missedIndex + 1];
-  }
 }
 
 module.exports = findMissingLetter;
