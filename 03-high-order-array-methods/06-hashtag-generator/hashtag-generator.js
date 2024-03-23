@@ -8,7 +8,7 @@ function generateHashtag(str) {
     return false;
   }
 
-  // trim whitespaces, tabs, new line chars
+  // split by whitespaces, tabs, new line chars
   const hash = str.split(/\s+/).reduce((acc, word) => {
     const hashWord = word.charAt(0).toUpperCase() + word.slice(1);
     return acc += hashWord;
