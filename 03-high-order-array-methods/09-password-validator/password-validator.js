@@ -5,10 +5,10 @@
  */
 function validatePassword(password) {
   const isValidLength = password.length >= 8;
-  const hasNumber = /\d/.test(password);
+  const hasDigit = /\d/.test(password);
   const hasUppercaseLetter = password !== password.toLowerCase();
   const hasLowercaseLetter = password !== password.toUpperCase();
-  return isValidLength && hasNumber && hasLowercaseLetter && hasUppercaseLetter;
+  return isValidLength && hasDigit && hasLowercaseLetter && hasUppercaseLetter;
 }
 
 /**
